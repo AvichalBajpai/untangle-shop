@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Untangle-shop</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untangle-Shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="main">
-   <h1>Untangle Shop</h1>
-   <p class="subtitle">Discover products across different categories</p>
-   <div id="features">
-  <input type="text" id="search" placeholder="Search Products">
-  <select id="category-select">
-    <option value="all">All categories</option>
-    <option value="gadgets">Gadgets</option>
-    <option value="home">Home</option>
-    <option value="travel">Travel</option>
-   
-  </select>
-   </div>
-   <p id="product-count"></p>
-<div id="images"></div>
+    <div id="header">
+     <div class="left">
+        <img src="./Assets/Untangle-logo.png" id="img" >    
+        <h2 id="a">Untangle Shop</h2>
+     </div>
+     <div class="right">
+        <p id="b">Internal Order Management System</p>
+     </div>
+   </div> 
+   <div class="Search">
+   <h2>Products</h2>
+   <div class="search-box">
+     <p>Search</p>
+    <input type="text" placeholder="Search products..." >
+</div>
+<div class="filter">
+    <p>Category</p>
+    <select id="category">
+        <option value="">All Categories</option>
+        <option value="Hardware">Hardware</option>
+        <option value="Software">Software</option>
+        <option value="Networking">Networking</option>
+        <option value="Services">Services</option>
+        <option value="Peripherals">Peripherals</option>
+    </select>
 
-    </div>
+</div>
+<div class="Sort_By">
+    <p>Sort by</p>
+    <select id="sort">
+        <option value="">Default</option>
+        <option value="price-asc">Price:Low->High</option>
+        <option value="price-desc">Price:High->Low</option>
+        <option value="stock-asc">Stock:Low->High</option>
+        <option value="name-asc">Name:A->Z</option>
+    </select>
+</div>
+   </div>
+
+   <div id="products-container"></div>
+
     <script src="app.js"></script>
 </body>
 </html>
